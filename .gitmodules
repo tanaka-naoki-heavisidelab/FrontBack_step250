@@ -1,0 +1,6 @@
+[submodule "front_step250"]
+	path = front_step250
+	url = https://github.com/tanaka-naoki-heavisidelab/front_step250
+[submodule "back_step250"]
+	path = back_step250
+	url = https://github.com/tanaka-naoki-heavisidelab/back_step250
