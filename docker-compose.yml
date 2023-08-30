@@ -16,7 +16,7 @@ services:
 
   frontendserver:
     build:
-      context: ./front_step250/server
+      context: ./front_step250
       args:
         - MY_UID=${MY_UID}
         - MY_GID=${MY_GID}
@@ -28,8 +28,10 @@ services:
       - ./front_step250:/home/appuser/devcon
     networks:
       - step250_network
-    ports:
-      - ${PORT_FRONT}:${PORT_FRONT}
+    # ports:
+    #   - ${PORT_FRONT}:${PORT_FRONT}
+    expose:
+      - ${PORT_FRONT}
     command: ["/bin/sh", "-c", "/home/appuser/devcon/build.sh"]
 
   backendserver:
